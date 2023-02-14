@@ -27,6 +27,8 @@ export class TabsContainerComponent implements AfterContentInit {
       tab.active = false;//turn every tab off so that we are sure not more than one tab is active
     })
     tab.active = true; // make our selected tab active
+
+    return false; // prevents default behavious of anchor tags
   }
 
 }
