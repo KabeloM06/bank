@@ -20,6 +20,12 @@ export class ModalService {
     })
   }
 
+  unregister(id: string){
+    this.modals = this.modals.filter(
+      element => element.id !== id
+    )
+  }
+
   // create a method to return visible value because it is private
   // makes it easier to control any changes. Easier to track changes
   isModalOpen(id: string) : boolean{
