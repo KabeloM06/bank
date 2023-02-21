@@ -11,7 +11,10 @@ export class RegisterComponent {
     Validators.required,
     Validators.minLength(3)
   ])
-    email= new FormControl('')
+    email= new FormControl('',[
+      Validators.required,
+      Validators.email
+    ])
   phoneNumber= new FormControl('')
   id_number= new FormControl('')
   password= new FormControl('')
