@@ -16,7 +16,11 @@ export class RegisterComponent {
       Validators.email
     ])
   phoneNumber= new FormControl('')
-  id_number= new FormControl('')
+  id_number= new FormControl('',[
+    Validators.required,
+    Validators.minLength(13),
+    Validators.maxLength(13)
+  ])
   password= new FormControl('')
   confirm_password= new FormControl('')
   

@@ -15,6 +15,13 @@
             
             It must be at least {{control.errors?.['minlength'].requiredLength}} characters long.
         </p>
+        <p *ngIf="control.errors?.['maxlength']" 
+        
+        class="text-red-500">
+            The value you entered is {{control.errors?.['maxlength'].actualLength}} characters long.
+            
+            It must be at most {{control.errors?.['maxlength'].requiredLength}} characters long.
+        </p>
         <p *ngIf="control.errors?.['email']" class="text-red-500 ">
           You must enter a valid email
         </p>
