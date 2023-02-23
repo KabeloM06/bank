@@ -41,4 +41,10 @@ export class RegisterComponent {
     id_number: this.id_number,
     password: this.password,
     confirm_password: this.confirm_password 
-})}
+})
+
+  register(){
+    console.log("form submitted");
+  }
+
+}
