@@ -7,9 +7,17 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
+  username= new FormControl('',[
+    Validators.required,
+    Validators.minLength(5)
+  ])
   name= new FormControl('',[
     Validators.required,
-    Validators.minLength(3)
+    Validators.minLength(1)
+  ])
+  surname= new FormControl('',[
+    Validators.required,
+    Validators.minLength(1)
   ])
     email= new FormControl('',[
       Validators.required,
@@ -35,7 +43,9 @@ export class RegisterComponent {
   
 
   registerForm = new FormGroup({
+    username: this.username,
     name: this.name,
+    surname: this.surname,
     email: this.email ,
     phoneNumber: this.phoneNumber,
     id_number: this.id_number,

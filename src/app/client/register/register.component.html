@@ -1,33 +1,44 @@
 <!-- Registration Form -->
 <form [formGroup]="registerForm" (ngSubmit)="register()">
     <!-- Name -->
+    
     <div class="mb-3">
-      <label class="inline-block mb-2">Name</label>
-      <app-input [control]="name" placeholder="Enter Name"></app-input>
+      <label class="inline-block mb-2">Name <span class="text-red-400">*</span></label>
+      <app-input [control]="name" placeholder="Enter Your Name"></app-input>
+    </div>
+    <!--Surname-->
+    <div class="mb-3">
+      <label class="inline-block mb-2">Surname <span class="text-red-400">*</span></label>
+      <app-input [control]="surname" placeholder="Enter Your Surname"></app-input>
+    </div>
+    <!--Username-->
+    <div class="mb-3">
+      <label class="inline-block mb-2">Username <span class="text-red-400">*</span></label>
+      <app-input [control]="username" placeholder="Enter A Username"></app-input>
     </div>
     <!-- Email -->
     <div class="mb-3">
-      <label class="inline-block mb-2">Email</label>
+      <label class="inline-block mb-2">Email <span class="text-red-400">*</span></label>
       <app-input [control]="email" type="email" placeholder="Enter Email"></app-input>
     </div>
     <!-- Phone Number -->
     <div class="mb-3">
-        <label class="inline-block mb-2">Phone Number</label>
+        <label class="inline-block mb-2">Phone Number <span class="text-red-400">*</span></label>
         <app-input [control]="phoneNumber" format="(000)000-0000" placeholder="Enter Phone Number"></app-input>
       </div>
     <!-- ID Number -->
     <div class="mb-3">
-      <label class="inline-block mb-2">ID Number</label>
+      <label class="inline-block mb-2">ID Number <span class="text-red-400">*</span></label>
       <app-input [control]="id_number" placeholder="Enter Your Id Number"></app-input>
     </div>
     <!-- Password -->
     <div class="mb-3">
-      <label class="inline-block mb-2">Password</label>
+      <label class="inline-block mb-2">Password <span class="text-red-400">*</span></label>
       <app-input [control]="password" type="password" placeholder="Enter Password"></app-input>
     </div>
     <!-- Confirm Password -->
     <div class="mb-3">
-      <label class="inline-block mb-2">Confirm Password</label>
+      <label class="inline-block mb-2">Confirm Password <span class="text-red-400">*</span></label>
       <app-input [control]="confirm_password" type="password" placeholder="Confirm Password"></app-input>
     </div>
     
