@@ -40,6 +40,10 @@ export class RegisterComponent {
   confirm_password= new FormControl('',[
     Validators.required
   ])
+
+  showAlert = false;
+  alertMsg = 'Please wait! Your account is being created.'
+  alertColor = 'blue';
   
 
   registerForm = new FormGroup({
@@ -54,7 +58,9 @@ export class RegisterComponent {
 })
 
   register(){
-    console.log("form submitted");
+    this.showAlert = true;
+    this.alertMsg = 'Please wait! Your account is being created.';
+    this.alertColor = 'blue';
   }
 
 }
